@@ -406,4 +406,20 @@ console.log(res2);
 
 
 
+// Урок 58. Получение данных с сервера. Async/Await (ES8)
+
+
+const postData = async (url, data) => {
+    const res = await fetch(url, {
+        method: "POST",
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: data
+    });
+
+    return await res.json();
+};
+
+
 
